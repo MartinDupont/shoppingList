@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="FacetManager">
+    <facet type="android-gradle" name="Android-Gradle">
+      <configuration>
+        <option name="GRADLE_PROJECT_PATH" value=":app" />
+      </configuration>
+    </facet>
+    <facet type="android" name="Android">
+      <configuration>
+        <option name="SELECTED_BUILD_VARIANT" value="debug" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleDebug" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileDebugSources" />
+        <afterSyncTasks>
+          <task>generateDebugSources</task>
+        </afterSyncTasks>
+        <option name="ALLOW_USER_CONFIGURATION" value="false" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/src/main/res" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
+      </configuration>
+    </facet>
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="3" platform="JVM 1.6" useProjectSettings="false" isTestModule="false" externalProjectId=":app">
+        <sourceSets>
+          <sourceSet>shoppingList.app.commonMain</sourceSet>
+        </sourceSets>
+        <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
+        <compilerSettings />
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/build/tmp/kotlin-classes/debug" />
+          <option name="classpath" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.21/4bcc2012b84840e19e1e28074284cac908be0295/kotlin-stdlib-1.3.21.jar:/home/dupontm/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.21/f30e4a9897913e53d778f564110bafa1fef46643/kotlin-stdlib-common-1.3.21.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/265ed3868e693a526f2d9e0dee5beb82/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/50d9dec024a1968606a71e6826ce8c91/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/4df78134d9d391d6fbed0a51acdd66f8/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/c31bc72349861b3d14c5dae3f1aac510/jars/classes.jar:/home/dupontm/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/381e13b90bf09c9c9585e3984606d9b3/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/5d37418e6c128add8290c7fb657d595f/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/43c09034d6a6729f83fd8585d28904d7/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/30aa4bd873e5695b90b3789e6d892bfc/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/b0759e53818239ffe2659b681bbe17c0/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/bd5672df3a51a7dde8754887ab588673/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/b03840315f4f5153b412ce71c0968e2c/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/ea99ef0d9834eaa73b5704d2c8f097d0/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/c4250e49abba1213ed4d0d1c62317aa1/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/9af3be8a3fc3cbdefb4cb2678e116eca/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/4d7643c3546f2d8f20d9381da1b5a4d8/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/b7a4c04c9e70e8eb740bc8c2f6fd86c1/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/62d275e5c24712ef3340eedba5088262/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/03e6be9e02913661741aaf8f0cf41d1f/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/3374bc1e43c145257c06389d9f73ed77/jars/classes.jar:/home/dupontm/.gradle/caches/modules-2/files-2.1/com.android.support/collections/28.0.0/c1bcdade4d3cc2836130424a3f3e4182c666a745/collections-28.0.0.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/ed80138b0440de8c1a5ebd7d39bee20c/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/6945356462444adcb912e619395927a0/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/317eaa6a82ed4b717826ff0a443b6182/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/8cd654257dba3c4c4a45d1dc86caa289/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/ffd3671b89623598d73c634f8e92a1b0/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/19d6ef2c3ad148d2a44311772dda31c0/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/bafdc7e928b533e9cdd4c499dcee8353/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/536b3c992a053dd61e53728ecc0b75c2/jars/classes.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/24f1466380417b37af19c264f2c1bcf0/jars/classes.jar:/home/dupontm/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.1.1/207a6efae6a3555e326de41f76bdadd9a239cbce/common-1.1.1.jar:/home/dupontm/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/bb6019852ee0352b9f6e0e80ae408878/jars/classes.jar:/home/dupontm/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.1.1/e55b70d1f5620db124b3e85a7f4bdc7bd48d9f95/common-1.1.1.jar:/home/dupontm/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/28.0.0/ed73f5337a002d1fd24339d5fb08c2c9d9ca60d8/support-annotations-28.0.0.jar:/home/dupontm/.gradle/caches/modules-2/files-2.1/com.android.support.constraint/constraint-layout-solver/1.1.3/bde0667d7414c16ed62d3cfe993cff7f9d732373/constraint-layout-solver-1.1.3.jar:/home/dupontm/android/platforms/android-28/android.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="app_debug" />
+          <option name="addCompilerBuiltIns" value="true" />
+          <option name="loadBuiltInsFromDependencies" value="true" />
+          <option name="languageVersion" value="1.3" />
+          <option name="apiVersion" value="1.3" />
+          <option name="pluginOptions">
+            <array>
+              <option value="plugin:org.jetbrains.kotlin.android:experimental=false" />
+              <option value="plugin:org.jetbrains.kotlin.android:enabled=true" />
+              <option value="plugin:org.jetbrains.kotlin.android:defaultCacheImplementation=hashMap" />
+            </array>
+          </option>
+          <option name="pluginClasspaths">
+            <array>
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.3.21/311c0d1cbb0a194e8712edaef7b92a8f0919ca26/kotlin-android-extensions-1.3.21.jar" />
+            </array>
+          </option>
+          <option name="multiPlatform" value="true" />
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+</module>
