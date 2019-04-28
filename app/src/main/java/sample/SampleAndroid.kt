@@ -46,6 +46,7 @@ fun saveList(outputStream: FileOutputStream, shoppingList: MutableList<String>) 
         file.flush()
         file.close()
     } catch (e: IOException) {
+        println(e.message)
     }
 }
 
@@ -59,19 +60,17 @@ class MainActivity : AppCompatActivity() {
 
     val filename = "file.txt"
 
-    private var fileInputStream: FileInputStream? = openFileInput(filename)
-
-    private var shoppingList = if (fileInputStream != null) {
-        getInitialList(fileInputStream!!)
-    } else {
-        mutableListOf()
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         hello()
         Sample().checkMe()
         setContentView(R.layout.activity_main)
+
+        val shoppingList = if (fileList().contains(filename)) {
+            getInitialList(openFileInput(filename)!!)
+        } else {
+            mutableListOf<String>()
+        }
 
         val viewManager = LinearLayoutManager(this)
         viewAdapter = MyAdapter(shoppingList)

@@ -43,6 +43,7 @@ class MyAdapter(private val myDataset: MutableList<String>) :
             val currentPosition = holder.layoutPosition
             myDataset.removeAt(currentPosition)
             notifyItemRemoved(currentPosition)
+            // TODO: Add delete logic
         }
     }
 
