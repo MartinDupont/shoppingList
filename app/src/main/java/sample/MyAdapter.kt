@@ -3,18 +3,24 @@ package sample
 import android.support.v7.widget.CardView
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 
-class MyAdapter(private val myDataset: Array<String>) :
+class MyAdapter(private val myDataset: MutableList<String>) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder.
     // Each data item is just a string in this case that is shown in a TextView.
-    class MyViewHolder(val cardView: LinearLayout) : RecyclerView.ViewHolder(cardView)
+    class MyViewHolder(val cardView: LinearLayout) : RecyclerView.ViewHolder(cardView) {
+        //private lateinit var deleteButton: Button
+        val deleteButton = cardView.findViewById<Button>(R.id.button)
+
+    }
 
 
     // Create new views (invoked by the layout manager)
@@ -32,6 +38,13 @@ class MyAdapter(private val myDataset: Array<String>) :
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
         holder.cardView.findViewById<TextView>(R.id.info_text).text = myDataset[position]
+
+
+        holder.deleteButton.setOnClickListener {
+            val currentPosition = holder.layoutPosition
+            myDataset.removeAt(currentPosition)
+            notifyItemRemoved(currentPosition)
+        }
     }
 
     // Return the size of your dataset (invoked by the layout manager)

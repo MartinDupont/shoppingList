@@ -32,12 +32,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         viewManager = LinearLayoutManager(this)
-        viewAdapter = MyAdapter(shoppingList.toTypedArray())
+        viewAdapter = MyAdapter(shoppingList)
 
         recyclerView = findViewById<RecyclerView>(R.id.my_recycler_view).apply {
             // use this setting to improve performance if you know that changes
             // in content do not change the layout size of the RecyclerView
-            //setHasFixedSize(true)
+            setHasFixedSize(true)
 
             // use a linear layout manager
             layoutManager = viewManager
@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 
                 shoppingList.add(editText.text.toString())
                 editText.text.clear()
-                viewAdapter = MyAdapter(shoppingList.toTypedArray())
+                viewAdapter = MyAdapter(shoppingList)
                 recyclerView.adapter = viewAdapter
                 println("HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                 println(shoppingList)
