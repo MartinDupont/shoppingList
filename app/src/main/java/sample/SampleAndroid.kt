@@ -1,5 +1,6 @@
 package sample
 
+import android.app.Activity
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -7,6 +8,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.KeyEvent
 import android.view.View
 import android.widget.EditText
+import java.io.*
 
 actual class Sample {
     actual fun checkMe() = 44
@@ -16,6 +18,38 @@ actual object Platform {
     actual val name: String = "Android"
 }
 
+fun getInitialList(inputStream: FileInputStream): MutableList<String> {
+    try {
+        val file = InputStreamReader(inputStream)
+        val br = BufferedReader(file)
+        var line = br.readLine()
+        val all = StringBuilder()
+        while (line != null) {
+            all.append(line + "\n")
+            line = br.readLine()
+        }
+        br.close()
+        file.close()
+
+        val text = all.toString()
+        return text.split(",").toMutableList()
+    } catch (e: IOException) {
+        return mutableListOf()
+    }
+}
+
+fun saveList(outputStream: FileOutputStream, shoppingList: MutableList<String>) {
+    try {
+        val file = OutputStreamWriter(outputStream)
+
+        file.write(shoppingList.toString().replace("[", "").replace("]", ""))
+        file.flush()
+        file.close()
+    } catch (e: IOException) {
+    }
+}
+
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
@@ -23,7 +57,15 @@ class MainActivity : AppCompatActivity() {
     // private lateinit var viewManager: RecyclerView.LayoutManager
     private lateinit var editText: EditText
 
-    private val shoppingList = mutableListOf("an item", "another item")
+    val filename = "file.txt"
+
+    private var fileInputStream: FileInputStream? = openFileInput(filename)
+
+    private var shoppingList = if (fileInputStream != null) {
+        getInitialList(fileInputStream!!)
+    } else {
+        mutableListOf()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,6 +103,9 @@ class MainActivity : AppCompatActivity() {
                 editText.text.clear()
                 viewAdapter = MyAdapter(shoppingList)
                 recyclerView.adapter = viewAdapter
+
+                val output = openFileOutput(filename, Activity.MODE_PRIVATE)
+                saveList(output, shoppingList)
 
 
                 return@OnKeyListener true
