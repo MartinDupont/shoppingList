@@ -9,7 +9,7 @@
     <EditText
             android:layout_width="391dp"
             android:layout_height="59dp"
-            android:text="Item"
+            android:text=""
             android:ems="10"
             android:id="@+id/editText"
             android:inputType="text"
