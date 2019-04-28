@@ -54,14 +54,14 @@ class MainActivity : AppCompatActivity() {
         editText = findViewById(R.id.editText)
 
         editText.setOnKeyListener(View.OnKeyListener { _, keyCode, event ->
-            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
+            val text = editText.text.toString()
+            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP && text != "") {
 
-                shoppingList.add(editText.text.toString())
+                shoppingList.add(text)
                 editText.text.clear()
                 viewAdapter = MyAdapter(shoppingList)
                 recyclerView.adapter = viewAdapter
-                println("HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-                println(shoppingList)
+
 
                 return@OnKeyListener true
             }
