@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var viewAdapter: RecyclerView.Adapter<*>
-    private lateinit var viewManager: RecyclerView.LayoutManager
+    // private lateinit var viewManager: RecyclerView.LayoutManager
     private lateinit var editText: EditText
 
     private val shoppingList = mutableListOf("an item", "another item")
@@ -31,8 +31,11 @@ class MainActivity : AppCompatActivity() {
         Sample().checkMe()
         setContentView(R.layout.activity_main)
 
-        viewManager = LinearLayoutManager(this)
+        val viewManager = LinearLayoutManager(this)
         viewAdapter = MyAdapter(shoppingList)
+
+        viewManager.stackFromEnd = true     // items gravity sticks to bottom
+        viewManager.reverseLayout = false   // item list sorting(new messages at bottom)
 
         recyclerView = findViewById<RecyclerView>(R.id.my_recycler_view).apply {
             // use this setting to improve performance if you know that changes

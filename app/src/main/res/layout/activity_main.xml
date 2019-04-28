@@ -18,6 +18,7 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="16dp"
+            android:background="@drawable/border"
             android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="8dp"/>
     <android.support.v7.widget.RecyclerView
@@ -28,8 +29,6 @@
             android:layout_marginStart="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/editText"
-            android:background="@drawable/border"
-            android:paddingTop="?attr/actionBarSize"
     />
 
 </android.support.constraint.ConstraintLayout>

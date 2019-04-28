@@ -29,7 +29,6 @@ class MyAdapter(private val myDataset: MutableList<String>) :
         // create a new view
         val textView = LayoutInflater.from(parent.context)
             .inflate(R.layout.my_text_view, parent, false) as LinearLayout
-        // TODO: set the view's size, margins, paddings and layout parameters
         return MyViewHolder(textView)
     }
 
