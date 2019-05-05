@@ -1,5 +1,7 @@
 package sample
 
+import android.app.Activity
+import android.content.Context
 import android.support.v7.widget.CardView
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -9,7 +11,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 
-class MyAdapter(private val myDataset: MutableList<String>) :
+class MyAdapter(private val context: Context, private val myDataset: MutableList<String>) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     // Provide a reference to the views for each data item
@@ -44,6 +46,8 @@ class MyAdapter(private val myDataset: MutableList<String>) :
             myDataset.removeAt(currentPosition)
             notifyItemRemoved(currentPosition)
             // TODO: Add delete logic
+            val output = context.openFileOutput("file.txt", Activity.MODE_PRIVATE)
+            saveList(output, myDataset)
         }
     }
 

@@ -5,8 +5,8 @@
       <configuration version="3" platform="Native " useProjectSettings="false" isTestModule="true" externalProjectId=":app">
         <sourceSets>
           <sourceSet>shoppingList.app.iosMain</sourceSet>
-          <sourceSet>shoppingList.app.commonTest</sourceSet>
           <sourceSet>shoppingList.app.commonMain</sourceSet>
+          <sourceSet>shoppingList.app.commonTest</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
         <compilerSettings />

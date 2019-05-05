@@ -73,7 +73,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         val viewManager = LinearLayoutManager(this)
-        viewAdapter = MyAdapter(shoppingList)
+        val context = this
+        viewAdapter = MyAdapter(context, shoppingList)
 
         viewManager.stackFromEnd = true     // items gravity sticks to bottom
         viewManager.reverseLayout = false   // item list sorting(new messages at bottom)
@@ -100,7 +101,7 @@ class MainActivity : AppCompatActivity() {
 
                 shoppingList.add(text)
                 editText.text.clear()
-                viewAdapter = MyAdapter(shoppingList)
+                viewAdapter = MyAdapter(context, shoppingList)
                 recyclerView.adapter = viewAdapter
 
                 val output = openFileOutput(filename, Activity.MODE_PRIVATE)
