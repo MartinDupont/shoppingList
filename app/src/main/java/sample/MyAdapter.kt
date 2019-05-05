@@ -2,13 +2,11 @@ package sample
 
 import android.app.Activity
 import android.content.Context
-import android.support.v7.widget.CardView
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.LinearLayout
+import android.widget.RelativeLayout
 import android.widget.TextView
 
 class MyAdapter(private val context: Context, private val myDataset: MutableList<String>) :
@@ -18,7 +16,7 @@ class MyAdapter(private val context: Context, private val myDataset: MutableList
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder.
     // Each data item is just a string in this case that is shown in a TextView.
-    class MyViewHolder(val cardView: LinearLayout) : RecyclerView.ViewHolder(cardView) {
+    class MyViewHolder(val cardView: RelativeLayout) : RecyclerView.ViewHolder(cardView) {
         //private lateinit var deleteButton: Button
         val deleteButton = cardView.findViewById<Button>(R.id.button)
 
@@ -30,7 +28,7 @@ class MyAdapter(private val context: Context, private val myDataset: MutableList
                                     viewType: Int): MyAdapter.MyViewHolder {
         // create a new view
         val textView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.my_text_view, parent, false) as LinearLayout
+            .inflate(R.layout.my_text_view, parent, false) as RelativeLayout
         return MyViewHolder(textView)
     }
 
@@ -45,7 +43,6 @@ class MyAdapter(private val context: Context, private val myDataset: MutableList
             val currentPosition = holder.layoutPosition
             myDataset.removeAt(currentPosition)
             notifyItemRemoved(currentPosition)
-            // TODO: Add delete logic
             val output = context.openFileOutput("file.txt", Activity.MODE_PRIVATE)
             saveList(output, myDataset)
         }

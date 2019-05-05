@@ -103,6 +103,7 @@ class MainActivity : AppCompatActivity() {
                 editText.text.clear()
                 viewAdapter = MyAdapter(context, shoppingList)
                 recyclerView.adapter = viewAdapter
+                recyclerView.scrollToPosition(viewAdapter.itemCount-1)
 
                 val output = openFileOutput(filename, Activity.MODE_PRIVATE)
                 saveList(output, shoppingList)
